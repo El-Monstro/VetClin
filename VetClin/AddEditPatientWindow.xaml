@@ -1,0 +1,50 @@
+﻿<Window x:Class="VetClin.AddEditPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VetClin"
+        mc:Ignorable="d"
+        Title="AddEditPatientWindow" Height="400" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Имя пациента:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="NameTextBox" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="375"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Вид:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="SpeciesTextBox" Text="{Binding Species, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="432"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Порода:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="BreedTextBox" Text="{Binding Breed, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="411"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Имя владельца:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="OwnerNameTextBox" Text="{Binding OwnerName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="369"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Контакт владельца:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="OwnerContactTextBox" Text="{Binding OwnerContact, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5" Width="348"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,5">
+            <Button Content="ОК" Click="OkButton_Click" Margin="5"/>
+            <Button Content="Отмена" Click="CancelButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
