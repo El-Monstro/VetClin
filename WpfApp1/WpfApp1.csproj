@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{257350F1-8C52-4CD6-BEA4-749A6B84B56F}</ProjectGuid>
+    <ProjectGuid>{5D1E17D3-6876-4215-9244-26F1AEF7F2AD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VetClin</RootNamespace>
-    <AssemblyName>VetClin</AssemblyName>
+    <RootNamespace>WpfApp1</RootNamespace>
+    <AssemblyName>WpfApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,9 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>dog.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,69 +53,21 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Appointment.cs" />
-    <Compile Include="DailyReportWindow.xaml.cs">
-      <DependentUpon>DailyReportWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginWindow1.xaml.cs">
-      <DependentUpon>LoginWindow1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Service.cs" />
-    <Compile Include="ServicesListWindow.xaml.cs">
-      <DependentUpon>ServicesListWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="AddEditPatientWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DailyReportWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginWindow1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddEditPatientWindow.xaml.cs">
-      <DependentUpon>AddEditPatientWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PatientManagement.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ServicesListWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patient.cs" />
-    <Compile Include="PatientEventArgs.cs" />
-    <Compile Include="PatientManagement.xaml.cs">
-      <DependentUpon>PatientManagement.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PatientManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -143,34 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Logo.png.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Крест Активный.png" />
-    <Resource Include="Source\Крест Не активный.png" />
-    <Resource Include="Source\Черта Активная.png" />
-    <Resource Include="Source\Черта Не активная.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Глобус Активный.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Глобус Не активный.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Стрелка Активная.png" />
-    <Resource Include="Source\Стрелка Не активная.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Настройка Активная.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Source\Настройка Не активная.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="dog.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
