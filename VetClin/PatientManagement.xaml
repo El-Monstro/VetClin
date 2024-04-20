@@ -5,7 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClin"
         mc:Ignorable="d"
-        Title="PatientManagement" Height="450" Width="800">
+        Title="PatientManagement" Height="450" Width="800" Background="#F0F0F0">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FE6584"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF5181A6"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF3F6B8E"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -23,12 +55,11 @@
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Добавить" Margin="10" Click="AddPatient_Click"/>
-            <Button Content="Удалить" Margin="10" Click="RemovePatient_Click"/>
-            <Button Content="Редактировать" Margin="10" Click="EditPatient_Click"/>
+            <Button Content="Добавить" Style="{StaticResource ButtonStyle}" Click="AddPatient_Click" Height="22" Width="74"/>
+            <Button Content="Удалить" Style="{StaticResource ButtonStyle}" Click="RemovePatient_Click" Height="23" Width="66"/>
+            <Button Content="Редактировать" Style="{StaticResource ButtonStyle}" Click="EditPatient_Click"/>
         </StackPanel>
         <Button Content="Назад" Margin="10,4,0,0" Padding="5" FontSize="14" FontWeight="Bold" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FE6584" Foreground="White" Click="BackButton_Click" Grid.Row="1"/>
-
     </Grid>
 
 </Window>

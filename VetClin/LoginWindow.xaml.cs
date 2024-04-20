@@ -44,8 +44,8 @@ namespace VetClin
         private bool CheckCredentials(string username, string password)
         {
 
-            string validUsername = "doctor";
-            string validPassword = "password";
+            string validUsername = "1";
+            string validPassword = "1";
 
 
             return username == validUsername && password == validPassword;
